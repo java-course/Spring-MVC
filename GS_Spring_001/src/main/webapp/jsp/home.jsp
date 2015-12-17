@@ -6,7 +6,6 @@
 
 <html>
     <body>
-        bye.jsp
-            <h1>Message : ${message}</h1>
+            <h1>HOME</h1>
     </body>
 </html>

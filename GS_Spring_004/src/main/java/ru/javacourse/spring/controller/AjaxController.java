@@ -29,8 +29,8 @@ public class AjaxController {
     }
 
     @RequestMapping(value = "/plus", method = RequestMethod.GET)
-    public @ResponseBody  String plus(@RequestParam String d1, @RequestParam String d2, HttpServletResponse response) {
-        return String.valueOf(Integer.parseInt(d1) + Integer.parseInt(d2));
+    public @ResponseBody  String plus(@RequestParam(value = "d1") String parameter1, @RequestParam String d2, HttpServletResponse response) {
+        return String.valueOf(Integer.parseInt(parameter1) + Integer.parseInt(d2));
     }
 
     @RequestMapping(value = "/plus2", method = RequestMethod.GET)

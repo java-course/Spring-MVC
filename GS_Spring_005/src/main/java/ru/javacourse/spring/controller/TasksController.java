@@ -42,7 +42,6 @@ public class TasksController {
 
 
     @Autowired
-    @Qualifier(value = "taskValidator")
     private TaskValidator taskValidator;
 
 
@@ -88,12 +87,9 @@ public class TasksController {
         binder.registerCustomEditor(Project.class, "project", new PropertyEditorSupport() {
 
             public void setAsText(String text) {
-                if (text instanceof String) {
                     Integer projectId = Integer.parseInt(text);
                     Project project = (Project) projectDao.getById(projectId);
                     setValue(project);
-
-                }
             }
 
             public String getAsText() {

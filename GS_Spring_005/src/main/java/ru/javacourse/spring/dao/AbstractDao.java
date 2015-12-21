@@ -14,7 +14,7 @@ public interface AbstractDao<T> {
 
     T getById(Integer id);
     List<T> findAll();
-    T create(T entyty);
+    T create(T entity);
     T update(T entity);
     void delete(T entity);
 

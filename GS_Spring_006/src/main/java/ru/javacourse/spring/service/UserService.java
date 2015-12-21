@@ -20,11 +20,7 @@ public class UserService {
 
     @Transactional
     public void create(User user) {
-        // check if exists
-        // check smth
-        // send request
         userDao.create(user);
-        // send email
     }
 
     @Transactional

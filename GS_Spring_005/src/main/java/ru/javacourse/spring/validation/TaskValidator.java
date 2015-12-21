@@ -20,7 +20,9 @@ public class TaskValidator implements Validator {
     }
 
     public void validate(Object o, Errors errors) {
+
         Task task = (Task)o;
+
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "", "Task name is required");
         if (task.getProject() == null)
             errors.rejectValue("project", "", "Task project is required, choose s project");

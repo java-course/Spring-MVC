@@ -25,7 +25,6 @@ public class UserController {
         return users;
     }
 
-
     @RequestMapping(method = RequestMethod.GET, value = "/users/{id}")
     public  @ResponseBody User getUser(@PathVariable("id") String userId, ModelMap model) {
         return userService.getById(Long.parseLong(userId));

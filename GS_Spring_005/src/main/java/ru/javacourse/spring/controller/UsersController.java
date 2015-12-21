@@ -23,7 +23,6 @@ public class UsersController {
     private AbstractDao userDao;
 
     @Autowired
-    @Qualifier(value = "userValidator")
     private UserValidator userValidator;
 
 

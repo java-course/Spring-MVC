@@ -35,7 +35,7 @@
             var xmlhttp = getXmlHttp();
             var d1value = document.getElementById("d1").value;
             var d2value = document.getElementById("d2").value;
-            xmlhttp.open('GET', '/plus2?d1='+ d1value + '&d2=' + d2value, false);
+            xmlhttp.open('GET', '/plus?d1='+ d1value + '&d2=' + d2value, false);
             xmlhttp.send(null);
             if(xmlhttp.status == 200) {
                 document.getElementById("result").innerHTML = xmlhttp.responseText;

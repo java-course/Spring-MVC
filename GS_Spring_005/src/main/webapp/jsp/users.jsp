@@ -8,8 +8,8 @@
     </tr>
     <c:forEach items="${users}" var="u">
         <tr>
-            <td><c:out value="${u.name}"/></td>
-            <td><c:out value="${u.email}"/></td>
+            <td>${u.name}</td>
+            <td>${u.email}</td>
             
             <td><a href="users/edit/${u.userId}">Edit</a>&nbsp;<a href="users/delete/${u.userId}">Delete</a></td>
 

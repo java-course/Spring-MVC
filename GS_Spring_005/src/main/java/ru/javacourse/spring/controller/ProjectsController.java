@@ -26,11 +26,9 @@ import java.util.List;
 public class ProjectsController {
 
     @Autowired
-    @Qualifier(value = "projectDao")
     private AbstractDao projectDao;
 
     @Autowired
-    @Qualifier(value = "projectValidator")
     private ProjectValidator projectValidator;
 
 
@@ -41,8 +39,9 @@ public class ProjectsController {
 
 
     @ModelAttribute("projects")
-    public List<Project> getAllProjects() {
-        return projectDao.findAll();
+        public List<Project> getAllProjects() {
+        List<Project> allProjects = projectDao.findAll();
+        return allProjects;
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/projects")
